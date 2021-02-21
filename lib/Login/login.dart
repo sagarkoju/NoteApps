@@ -265,7 +265,7 @@ class _LoginState extends State<Login> {
                                                      Get.snackbar("Welcome to ", "Home Page",
                               snackPosition: SnackPosition.BOTTOM,
                               colorText: Colors.red,
-                              backgroundColor: Colors.black,
+                              backgroundColor: Colors.blueAccent[200],
                               animationDuration: Duration(milliseconds: 5000),
                                titleText: Text("Welcome to Home Page",style: TextStyle(color: Colors.red),),
                                messageText: Text("")

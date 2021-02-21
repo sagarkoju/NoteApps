@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:notes/QuestionBank/8sem.dart';
+import 'package:notes/SixSem/6question.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class QuestionBank extends StatelessWidget {
@@ -83,7 +84,7 @@ class QuestionBank extends StatelessWidget {
                       child: ListTile(
                           title: FlatButton.icon(
                               onPressed: (){
-                              
+                              Get.to(Ques());
                               },
                               icon: Icon(Icons.note,),
                               label: Text("Semester")),

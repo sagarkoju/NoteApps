@@ -3,6 +3,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:notes/Fifth/fivemain.dart';
 import 'package:notes/Login/login.dart';
 import 'package:notes/Notes/eightnote.dart';
 import 'package:notes/Notes/sevennote.dart';
@@ -11,6 +12,7 @@ import 'package:notes/Syallbus/Eight/syllabus.dart';
 import 'package:notes/servie/auth_provider.dart';
 
 import 'SixSem/sixsem.dart';
+import 'contact/contact.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -129,6 +131,14 @@ class _HomePageState extends State<HomePage> {
               },
               leading: Icon(Icons.home),
               title: Text("Syallbus "),
+              ),
+                  ListTile(
+              onTap: (){
+               Get.to(ContactUs());
+
+              },
+              leading: Icon(Icons.contact_page),
+              title: Text("Contact us "),
               ),
                ListTile(
               onTap: (){
@@ -265,7 +275,7 @@ class _HomePageState extends State<HomePage> {
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
-                          print('Notes is pressed');
+                          Get.to(Five());
                         },
                         icon: Icon(Icons.note,),
                         label: Text("Semester")),
@@ -439,7 +449,7 @@ class _HomePageState extends State<HomePage> {
                                         child: ListTile(
                                             title: FlatButton.icon(
                                                 onPressed: (){
-                                                  print('Notes is pressed');
+                                                 Get.to(Five());
                                                 },
                                                 icon: Icon(Icons.note,),
                                                 label: Text("Semester")),

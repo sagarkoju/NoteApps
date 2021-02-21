@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:get/get.dart';
+import 'package:notes/Fifth/fivemain.dart';
 
 import 'package:notes/Login/login.dart';
 import 'package:notes/Notes/eightnote.dart';
@@ -11,6 +12,7 @@ import 'package:notes/QuestionBank/questionbank.dart';
 import 'package:notes/SixSem/sixsem.dart';
 import 'package:notes/Syallbus/Eight/syllabus.dart';
 import 'package:notes/Notes/sevennote.dart';
+import 'package:notes/contact/contact.dart';
 import 'package:notes/servie/auth_provider.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -105,15 +107,23 @@ class _MyHomePageState extends State<MyHomePage> {
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>QuestionBank()));
               },
-              leading: Icon(Icons.home),
+              leading: Icon(Icons.note_add),
               title: Text("Question Bank "),
               ),
                ListTile(
               onTap: (){
                 Navigator.push(context, MaterialPageRoute(builder: (context)=>Syllabus()));
               },
-              leading: Icon(Icons.home),
+              leading: Icon(Icons.note_sharp),
               title: Text("Syallbus "),
+              ),
+               ListTile(
+              onTap: (){
+               Get.to(ContactUs());
+
+              },
+              leading: Icon(Icons.contact_page),
+              title: Text("Contact us "),
               ),
                ListTile(
               onTap: (){
@@ -121,7 +131,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 firebaseAuth.signOut().then((value) => Get.to(Login()));
 
               },
-              leading: Icon(Icons.home),
+              leading: Icon(Icons.logout),
               title: Text("Logout "),
               ),
           ]
@@ -168,6 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                         Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Card(
+                                        
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
@@ -246,7 +257,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
-                          print('Notes is pressed');
+                          Get.to(Five());
                         },
                         icon: Icon(Icons.note,),
                         label: Text("Semester")),
@@ -347,13 +358,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                         Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Card(
+                                          color: Colors.black,
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
                           print('Notes is pressed');
                         },
-                        icon: Icon(Icons.note,),
-                        label: Text("Semester")),
+                        icon: Icon(Icons.note, color: Colors.red,),
+                        label: Text("Semester",
+                                                style: TextStyle(color: Colors.red,),)),
                                               subtitle: Text(
                                                 '1',
                                                 textAlign: TextAlign.center,
@@ -366,13 +379,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Card(
+                                           color: Colors.black,
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
                           print('Notes is pressed');
                         },
-                        icon: Icon(Icons.note,),
-                        label: Text("Semester")),
+                        icon: Icon(Icons.note,color: Colors.red,),
+                        label: Text("Semester",
+                                                style: TextStyle(color: Colors.red,),)),
                                               subtitle: Text(
                                                 '2',
                                                 textAlign: TextAlign.center,
@@ -385,13 +400,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Card(
+                                           color: Colors.black,
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
                           print('Notes is pressed');
                         },
-                        icon: Icon(Icons.note,),
-                        label: Text("Semester")),
+                        icon: Icon(Icons.note,color: Colors.red,),
+                        label: Text("Semester",
+                                                style: TextStyle(color: Colors.red,),)),
                                               subtitle: Text(
                                                 '3',
                                                 textAlign: TextAlign.center,
@@ -404,13 +421,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Card(
+                                           color: Colors.black,
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
                           print('Notes is pressed');
                         },
-                        icon: Icon(Icons.note,),
-                        label: Text("Semester")),
+                        icon: Icon(Icons.note,color: Colors.red,),
+                        label: Text("Semester",
+                                                style: TextStyle(color: Colors.red,),)),
                                               subtitle: Text(
                                                 '4',
                                                 textAlign: TextAlign.center,
@@ -422,13 +441,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Card(
+                                           color: Colors.black,
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
-                          print('Notes is pressed');
+                  Get.to(Five());
                         },
-                        icon: Icon(Icons.note,),
-                        label: Text("Semester")),
+                        icon: Icon(Icons.note,color: Colors.red,),
+                        label: Text("Semester",
+                                                style: TextStyle(color: Colors.red,),)),
                                               subtitle: Text(
                                                 '5',
                                                 textAlign: TextAlign.center,
@@ -440,13 +461,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Card(
+                                           color: Colors.black,
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
                           Get.to(Six());
                         },
-                        icon: Icon(Icons.note,),
-                        label: Text("Semester")),
+                        icon: Icon(Icons.note,color: Colors.red,),
+                        label: Text("Semester",
+                                                style: TextStyle(color: Colors.red,),)),
                                               subtitle: Text(
                                                 '6',
                                                 textAlign: TextAlign.center,
@@ -458,14 +481,16 @@ class _MyHomePageState extends State<MyHomePage> {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Card(
+                                           color: Colors.black,
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)=>
                           Seven()));
                         },
-                        icon: Icon(Icons.note,),
-                        label: Text("Semester")),
+                        icon: Icon(Icons.note,color: Colors.red,),
+                        label: Text("Semester",
+                                                style: TextStyle(color: Colors.red,),)),
                                               subtitle: Text(
                                                 '7',
                                                 textAlign: TextAlign.center,
@@ -477,13 +502,15 @@ class _MyHomePageState extends State<MyHomePage> {
                                       Padding(
                                         padding: const EdgeInsets.all(8.0),
                                         child: Card(
+                                           color: Colors.black,
                                           child: ListTile(
                                               title: FlatButton.icon(
                         onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder:(_)=>Eight()));
                         },
-                        icon: Icon(Icons.note,),
-                        label: Text("Semester")),
+                        icon: Icon(Icons.note,color: Colors.red,),
+                        label: Text("Semester",
+                                                style: TextStyle(color: Colors.red,),)),
                                               subtitle: Text(
                                                 '8',
                                                 textAlign: TextAlign.center,

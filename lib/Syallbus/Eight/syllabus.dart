@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:notes/SixSem/syllabus.dart';
 import 'package:notes/Syallbus/Eight/eightsyllabus.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -79,7 +80,7 @@ class Syllabus extends StatelessWidget {
                       child: ListTile(
                           title: FlatButton.icon(
                               onPressed: (){
-                                print('Notes is pressed');
+                                Get.to(Syallbus());
                               },
                               icon: Icon(Icons.note,),
                               label: Text("Semester")),

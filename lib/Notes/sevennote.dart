@@ -63,7 +63,7 @@ class Seven extends StatelessWidget {
                 elevation: 2.0,
                 child: ListTile(
                   onTap: (){
-                    launch("https://drive.google.com/file/d/1G_GL0Mn8g8QDSwWczqCEalXRdWkdu8Qe/view?usp=sharing");
+                    launch("https://drive.google.com/file/d/1EuKxZRcuBIC7qMJetmOV3gZw_T6OJg2Z/view?usp=sharing");
                   },
                   leading: CircleAvatar(
                     radius: 30.0,
